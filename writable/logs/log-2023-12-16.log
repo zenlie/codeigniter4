@@ -1,0 +1,108 @@
+CRITICAL - 2023-12-16 06:51:35 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH\HTTP\SiteURI.php on line 199.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+ 2 SYSTEMPATH\HTTP\SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), null, null)
+ 3 SYSTEMPATH\HTTP\CLIRequest.php(78): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'serve')
+ 4 SYSTEMPATH\Config\Services.php(144): CodeIgniter\HTTP\CLIRequest->__construct(Object(Config\App))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::clirequest(Object(Config\App), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('clirequest', [...])
+ 7 SYSTEMPATH\Config\Services.php(139): CodeIgniter\Config\BaseService::getSharedInstance('clirequest', Object(Config\App))
+ 8 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::clirequest(Object(Config\App))
+ 9 SYSTEMPATH\Config\Services.php(537): CodeIgniter\Config\BaseService::__callStatic('clirequest', [...])
+10 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App), true)
+11 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+12 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-12-16 06:51:35 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php:199
+Stack trace:
+#0 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), '/', NULL)
+#3 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#13 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(520): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#15 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#16 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Debug\Exceptions.php(137): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#17 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\ConfigException))
+#18 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\CLIRequest.php(78): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'serve')
+#3 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(144): CodeIgniter\HTTP\CLIRequest->__construct(Object(Config\App))
+#4 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::clirequest(Object(Config\App), false)
+#5 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('clirequest', Array)
+#6 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(139): CodeIgniter\Config\BaseService::getSharedInstance('clirequest', Object(Config\App))
+#7 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::clirequest(Object(Config\App))
+#8 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(537): CodeIgniter\Config\BaseService::__callStatic('clirequest', Array)
+#9 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App), true)
+#10 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#11 C:\xampp\htdocs\tokobuku\spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+in SYSTEMPATH\HTTP\SiteURI.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-16 06:52:56 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH\HTTP\SiteURI.php on line 199.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+ 2 SYSTEMPATH\HTTP\SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), null, null)
+ 3 SYSTEMPATH\HTTP\CLIRequest.php(78): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'serve')
+ 4 SYSTEMPATH\Config\Services.php(144): CodeIgniter\HTTP\CLIRequest->__construct(Object(Config\App))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::clirequest(Object(Config\App), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('clirequest', [...])
+ 7 SYSTEMPATH\Config\Services.php(139): CodeIgniter\Config\BaseService::getSharedInstance('clirequest', Object(Config\App))
+ 8 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::clirequest(Object(Config\App))
+ 9 SYSTEMPATH\Config\Services.php(537): CodeIgniter\Config\BaseService::__callStatic('clirequest', [...])
+10 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App), true)
+11 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\Config\BaseService::__callStatic('createRequest', [...])
+12 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-12-16 06:52:56 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php:199
+Stack trace:
+#0 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), '/', NULL)
+#3 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#13 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(520): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#15 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#16 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Debug\Exceptions.php(137): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#17 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\ConfigException))
+#18 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL(Object(Config\App))
+#1 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL(Object(Config\App), NULL, NULL)
+#2 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\HTTP\CLIRequest.php(78): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), 'serve')
+#3 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(144): CodeIgniter\HTTP\CLIRequest->__construct(Object(Config\App))
+#4 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::clirequest(Object(Config\App), false)
+#5 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('clirequest', Array)
+#6 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(139): CodeIgniter\Config\BaseService::getSharedInstance('clirequest', Object(Config\App))
+#7 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::clirequest(Object(Config\App))
+#8 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\Services.php(537): CodeIgniter\Config\BaseService::__callStatic('clirequest', Array)
+#9 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::createRequest(Object(Config\App), true)
+#10 C:\xampp\htdocs\tokobuku\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\Config\BaseService::__callStatic('createRequest', Array)
+#11 C:\xampp\htdocs\tokobuku\spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+in SYSTEMPATH\HTTP\SiteURI.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
