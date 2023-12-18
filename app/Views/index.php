@@ -1,7 +1,6 @@
 <?= $this->extend('layout/template') ?>
 
 <?= $this->section('content') ?>
-<?= $this->include('layout/sidebar') ?>
 
             <div id="layoutSidenav_content">
                 <main>
